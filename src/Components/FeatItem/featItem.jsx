@@ -1,5 +1,14 @@
 import '../../Styles/FeatItem.css';
 
+/**
+ * hero on home page
+ *
+ * @param icon
+ * @param title
+ * @param desc
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function FeatItem({icon, title, desc}) {
     return (
         <div className="feature">

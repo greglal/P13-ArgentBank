@@ -11,7 +11,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCircleUser, faSignOutAlt} from "@fortawesome/free-solid-svg-icons";
 
 /**
- * header with link to login / log out and user's name if connected
+ * header with link to sign in / sign out and user's name if connected
  *
  * @returns {JSX.Element}
  * @constructor

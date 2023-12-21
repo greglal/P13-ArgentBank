@@ -1,7 +1,6 @@
 import axios from 'axios';
 import PropTypes from 'prop-types';
 
-
 const base_URL = 'http://localhost:3001/api/v1/user';
 const ERROR_MESSAGE = 'Error. Please try again  :';
 const CONTENT_TYPE_JSON = 'application/json';

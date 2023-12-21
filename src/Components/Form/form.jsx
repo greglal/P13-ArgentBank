@@ -10,7 +10,12 @@ import { faCircleUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
-
+/**
+ * sign in form with inputs for username, password, checkbox "remember me" and validation button
+ *
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function Login(){
     //use state
     const [email, setEmail] = useState("")
@@ -73,7 +78,6 @@ export default function Login(){
 
     if( (token !== null) &&(loginStatus === 200) ) {
         return <Navigate to="/profile" />
-        // return console.log("miss token")
     }
 
     return (

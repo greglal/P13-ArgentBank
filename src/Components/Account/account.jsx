@@ -1,6 +1,14 @@
 import "../../Styles/Account.css";
 
-
+/**
+ * Account with name, mount and balance
+ *
+ * @param accountName
+ * @param mount
+ * @param balance
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function Account({accountName, mount, balance}) {
 
     return (

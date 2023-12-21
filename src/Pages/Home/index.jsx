@@ -1,4 +1,3 @@
-import Header from '../../Components/Header/header';
 import Banner from "../../Components/Banner/banner";
 import '../../Styles/Home.css';
 import FeatItem from "../../Components/FeatItem/featItem";
@@ -6,6 +5,12 @@ import chat from "../../Assets/icon-chat.png";
 import money from "../../Assets/icon-money.png";
 import security from "../../Assets/icon-security.png";
 
+/**
+ * home page
+ *
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function Accueil () {
 
     return (

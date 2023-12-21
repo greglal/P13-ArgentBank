@@ -1,7 +1,5 @@
 import "../../Styles/Profil.css";
 import Account from "../../Components/Account/account";
-import {store} from "../../Redux/store";
-import {Provider} from 'react-redux';
 import { useState , useEffect} from 'react'
 import {
     getLoginFetch,
@@ -17,6 +15,12 @@ import {getFirstName} from "../../Redux/Reducers/firstNameReducer";
 import {getLastName} from "../../Redux/Reducers/lastNameReducer";
 import PropTypes from "prop-types";
 
+/**
+ * profile page (all accounts and form to edit first and last names
+ *
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function Profile() {
     const account1 = "Argent Bank Checking (x8349)"
     const account2 = "Argent Bank Savings (x6712)"
@@ -34,7 +38,6 @@ export default function Profile() {
     const [newLastName, setNewLastName] = useState('')
     const [formatErrorName, setFormatErrorName] = useState('')
     const dispatch = useDispatch()
-    const regex = /^[A-zÀ-ú-']{2,}$/
 
     /**
      * use effect
