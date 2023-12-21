@@ -1,0 +1,51 @@
+.header-navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*height: 50px;*/
+    /*padding: 10px 30px;*/
+}
+
+.main-logo{
+    height: 50px;
+    margin: 0 0 0 20px;
+    vertical-align: middle;
+}
+
+.login {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    margin:0 20px 0 0;
+}
+
+.sign-out-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 160px;
+    margin: 20px 20px 0 0;
+}
+
+.profile-name-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    width: 60px;
+}
+
+.login-icon-nav{
+    margin:0;
+}
+
+.sign-out{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}

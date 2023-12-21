@@ -1,0 +1,48 @@
+.profile-section{
+    height: 85vh;
+    background-color:#12002b;
+}
+
+.profile-section h1{
+    color: white;
+    padding-top: 10px;
+}
+
+#edit-section{
+    display: none;
+}
+
+#edit-button{
+    width: 100px;
+    height: 40px;
+    border-color: #00bc77;
+    background-color: #00bc77;
+    color: #fff;
+    font-weight: bold;
+}
+
+.btn-form{
+    margin: 10px auto;
+    width: 400px;
+}
+
+.edit-button{
+    background-color: #00bc77;
+    color: #fff;
+    width: 100px;
+    height: 40px;
+    margin: 10px 20px;
+}
+
+.edit-form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 500px;
+    margin: auto;
+}
+
+.edit-input{
+    height: 20px;
+    padding: 10px;
+}

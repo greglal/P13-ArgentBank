@@ -1,0 +1,8 @@
+.footer{
+    height: 60px;
+    border-top: 2px solid #ccc;
+}
+
+.footer p {
+    margin-top: 30px;
+}

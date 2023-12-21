@@ -1,0 +1,52 @@
+.login-form{
+    background-color: white;
+    width: 300px;
+    height: 350px;
+    margin: auto;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-icon{
+    margin-top: 15px;
+    height: 20px;
+}
+
+.icon{
+    height: 20px;
+}
+
+.input-wrapper{
+    display: flex;
+    flex-direction: column;
+    text-align:left;
+    margin: 15px 30px;
+}
+
+.input-label{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.input-area{
+    height: 30px;
+}
+
+.input-remember{
+    text-align: left;
+    margin-left: 35px;
+}
+
+.sign-in-button{
+    background-color: #00bc77;
+    border:0;
+    margin: 15px;
+    height: 35px;
+    width: 240px;
+    color: white;
+    font-size: 18px;
+    text-decoration: underline;
+}
