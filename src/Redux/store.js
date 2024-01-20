@@ -1,5 +1,4 @@
 import { configureStore } from "@reduxjs/toolkit"
-// redux slice
 import firstNameReducer from '../Redux/Reducers/firstNameReducer';
 import lastNameReducer from '../Redux/Reducers/lastNameReducer';
 import tokenReducer from '../Redux/Reducers/tokenReducer';

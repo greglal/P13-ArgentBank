@@ -52,7 +52,7 @@ export default function Header () {
             }
             { (token !== 0) &&
                 <div className="sign-out-nav">
-                    <Link to="/profil" className="profile-name-nav">
+                    <Link to="/profile" className="profile-name-nav">
                         <div className="login-icon-nav"><FontAwesomeIcon className="icon" icon={faCircleUser} /></div>
                         <span className="">{firstName}</span>
                     </Link>

@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import { useState} from "react"
 import { Navigate } from "react-router-dom"
 import { useSelector,useDispatch } from "react-redux"
@@ -37,9 +36,6 @@ export default function Login(){
         }
         dispatch(getToken(token))
     }
-    addToken.propType = {
-        token: PropTypes.string.isRequired,
-    }
 
     /**
      * handle remember
@@ -48,9 +44,6 @@ export default function Login(){
      */
     const handleRemember = (e) => {
         setRemember(e.target.checked)
-    }
-    handleRemember.prototype = {
-        event: PropTypes.object.isRequired,
     }
 
     /**
@@ -71,9 +64,6 @@ export default function Login(){
                 setLoginError(res.message)
             }
         })
-    }
-    handleSubmit.prototype = {
-        event: PropTypes.object.isRequired,
     }
 
     if( (token !== null) &&(loginStatus === 200) ) {
