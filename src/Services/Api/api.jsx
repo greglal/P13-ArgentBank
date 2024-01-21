@@ -1,5 +1,4 @@
 import axios from 'axios';
-import PropTypes from 'prop-types';
 
 const base_URL = 'http://localhost:3001/api/v1/user';
 const ERROR_MESSAGE = 'Error. Please try again  :';
@@ -32,9 +31,6 @@ export function getLoginData(data) {
         }
     }
 }
-getLoginData.prototype = {
-    data: PropTypes.object.isRequired,
-}
 
 /**
  * get login fetch datas
@@ -66,9 +62,6 @@ export function getLoginFetchData(data) {
         }
     }
 }
-getLoginFetchData.prototype = {
-    data: PropTypes.object.isRequired,
-}
 
 /**
  * save user profil datas
@@ -93,9 +86,6 @@ export function saveUserProfilData(data) {
             return obj
         }
     }
-}
-saveUserProfilData.prototype = {
-    data: PropTypes.object.isRequired,
 }
 
 /**

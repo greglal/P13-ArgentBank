@@ -13,7 +13,7 @@ import {
 } from "../../Redux/selectors";
 import {getFirstName} from "../../Redux/Reducers/firstNameReducer";
 import {getLastName} from "../../Redux/Reducers/lastNameReducer";
-import PropTypes from "prop-types";
+
 
 /**
  * profile page (all accounts and form to edit first and last names
@@ -33,10 +33,8 @@ export default function Profile() {
     const token = useSelector(selectToken)
     const firstName = useSelector(selectFirstName)
     const lastName = useSelector(selectLastName)
-    const [ProfilEdit, setProfilEdit] = useState(false)
     const [newFirstName, setNewFirstName] = useState('')
     const [newLastName, setNewLastName] = useState('')
-    const [formatErrorName, setFormatErrorName] = useState('')
     const dispatch = useDispatch()
 
     /**
@@ -83,16 +81,10 @@ export default function Profile() {
      */
     const handleCancel = (e) => {
         e.preventDefault()
-        setFormatErrorName("")
-        setProfilEdit(false) //close form
         document.getElementById("edit-section").style.display = "none";
         document.getElementById("edit-button").style.display = "inline-block";
         document.getElementById("fullName").style.display = "block";
     }
-    handleCancel.prototype = {
-        e: PropTypes.object.isRequired,
-    }
-
 
     return (
         <div className="profile-section">
