@@ -128,7 +128,6 @@ export const getLoginFetch = async (token) => {
             },
         });
 
-        console.log(token)
         return getLoginFetchData(response.data);
     } catch (error) {
         console.error("API error:", error);

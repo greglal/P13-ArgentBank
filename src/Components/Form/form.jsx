@@ -59,7 +59,6 @@ export default function Login(){
             if(res.status !== 400){
                 setLoginStatus(res.status)
                 addToken(res.token)
-                console.log(res.token)
             } else {
                 setLoginError(res.message)
             }
