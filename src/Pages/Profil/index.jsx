@@ -11,9 +11,7 @@ import {
     selectLastName,
     selectToken
 } from "../../Redux/selectors";
-import {getFirstName} from "../../Redux/Reducers/firstNameReducer";
-import {getLastName} from "../../Redux/Reducers/lastNameReducer";
-
+import {getFirstName,getLastName } from "../../Redux/Reducers/userReducer";
 
 /**
  * profile page (all accounts and form to edit first and last names

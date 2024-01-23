@@ -3,7 +3,7 @@ import argentBankLogo from '../../Assets/argentBankLogo.png';
 import '../../Styles/Header.css';
 import { useSelector, useDispatch} from "react-redux";
 import {selectFirstName, selectToken} from "../../Redux/selectors";
-import {getFirstName} from "../../Redux/Reducers/firstNameReducer";
+import {getFirstName} from "../../Redux/Reducers/userReducer";
 import {getToken} from "../../Redux/Reducers/tokenReducer";
 import {getLoginFetch} from "../../Services/Api/api";
 import { useEffect} from "react";

@@ -1,7 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit"
-import firstNameReducer from '../Redux/Reducers/firstNameReducer';
-import lastNameReducer from '../Redux/Reducers/lastNameReducer';
+// import firstNameReducer from '../Redux/Reducers/firstNameReducer';
+// import lastNameReducer from '../Redux/Reducers/lastNameReducer';
 import tokenReducer from '../Redux/Reducers/tokenReducer';
+import userReducer from "./Reducers/userReducer";
 
 /**
  * store configuration
@@ -10,8 +11,7 @@ import tokenReducer from '../Redux/Reducers/tokenReducer';
  */
 export const store = configureStore({
     reducer: {
-        firstName: firstNameReducer,
-        lastName: lastNameReducer,
+        user: userReducer,
         token: tokenReducer
     },
 })

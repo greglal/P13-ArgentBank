@@ -4,9 +4,9 @@ export const selectToken = (state) => {
 }
 // first name selector
 export const selectFirstName = (state) => {
-    return state.firstName.value
+    return state.user.firstName
 }
 // last name selector
 export const selectLastName = (state) => {
-    return state.lastName.value
+    return state.user.lastName
 }
