@@ -77,7 +77,7 @@ export default function Profile() {
             document.getElementById("edit-section").style.display = "none";
             dispatch(getFirstName(newFirstName));
             dispatch(getLastName(newLastName));
-            const fullName = {"firstName ": newFirstName, "lastName": newLastName};
+            const fullName = {"firstName": newFirstName, "lastName": newLastName};
             saveUserProfil(token, fullName);
         }
 
