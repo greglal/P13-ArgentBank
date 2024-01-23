@@ -17,6 +17,9 @@
     font-weight: bold;
     color: black;
     margin:0 20px 0 0;
+    width: 80px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .sign-out-nav{
@@ -38,7 +41,7 @@
 }
 
 .login-icon-nav{
-    margin:0;
+    margin-right: 5px;
 }
 
 .sign-out{
@@ -48,4 +51,8 @@
     text-decoration: none;
     font-weight: bold;
     color: black;
+}
+
+.logout-icon{
+    padding-left: 10px;
 }

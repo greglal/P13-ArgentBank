@@ -54,7 +54,7 @@ export default function Header () {
                 <div className="sign-out-nav">
                     <Link to="/profile" className="profile-name-nav">
                         <div className="login-icon-nav"><FontAwesomeIcon className="icon" icon={faCircleUser} /></div>
-                        <span className="">{firstName}</span>
+                        <span className="firstNameHeader">{firstName}</span>
                     </Link>
                     <Link to="/" className="sign-out">
                         <div className="logout-icon" onClick={handleSignOut}><FontAwesomeIcon icon={faSignOutAlt} /></div>

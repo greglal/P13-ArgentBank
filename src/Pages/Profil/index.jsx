@@ -55,7 +55,14 @@ export default function Profile() {
     /**
      * handle edit button
      */
-    const handleEdit = () => {
+    const handleEdit = (e) => {
+        e.preventDefault();
+
+        //clear inputs
+        setNewFirstName({firstName})
+        setNewLastName({lastName})
+
+        // hide edit panel
         document.getElementById("fullName").style.display = "none";
         document.getElementById("edit-button").style.display = "none";
         document.getElementById("edit-section").style.display = "block";
