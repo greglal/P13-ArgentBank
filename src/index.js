@@ -9,7 +9,7 @@ import {Provider} from 'react-redux';
 import {store} from "./Redux/store";
 import Profile from "./Pages/Profil";
 import Error from "./Components/Error/error";
-
+import ProtectedRoute from "./Components/ProtectedRoute/protectedRoute";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,7 +20,13 @@ root.render(
                 <Routes>
                     <Route path= "/" element={<Home />} />
                     <Route path= "/login" element={<Login />} />
-                    <Route path= "/profile" element={<Profile />} />
+                    <Route
+                        element={
+                          <ProtectedRoute>
+                              <Profile />
+                          </ProtectedRoute>} >
+                        <Route path = "/profile" element={<Profile />} />
+                    </Route>
                     <Route path="*" element={<Error />} />
                 </Routes>
             </Provider>
