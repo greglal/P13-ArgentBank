@@ -9,35 +9,10 @@ basePath: /api/v1
 schemes:
   - http
 paths:
-  /user/profile/{accountId}:
+  /account/transactions:
     get:
-      tags:
-        - User Transactions
-      summary: User's accounts
-      description: API to get all accounts
-      parameters:
-        - in: header
-          type: string
-          name: Authorization
-          description: Attached Bearer JWT token
-          required: true
-        - name: accountId
-          in: path
-          description: user's Account Id
-          required: true
-          type: string
-      responses:
-        '200':
-          description: Transactions successfully retrieved
-          schema:
-            $ref: '#/definitions/Transactions'
-        '400':
-          description: Invalid Fields
-        '500':
-          description: Internal Server Error
-
-  /user/profile/{accountId}/transactions:
-    get:
+      security:
+        - Bearer: [ ]
       tags:
         - User Transactions
       summary: User Transactions for current month
@@ -53,6 +28,8 @@ paths:
           name: accountId
           description: User's account Id
           required: true
+      produces:
+        - application/json
       responses:
         '200':
           description: Transactions successfully retrieved
@@ -60,11 +37,17 @@ paths:
             $ref: '#/definitions/Transactions'
         '400':
           description: Invalid Fields
+        '401':
+          description: Unauthorized
+        '404' :
+          description: Not Found
         '500':
           description: Internal Server Error
 
-  /user/accounts/{accountId}/transactions/{transactionId}:
+  /account/transactions/{transactionId}:
     get:
+      security:
+        - Bearer: [ ]
       tags:
         - User Transactions
       summary: Transaction details
@@ -85,6 +68,8 @@ paths:
           name: transactionId
           description: Transaction's Id
           required: true
+      produces:
+        - application/json
       responses:
         '200':
           description: Transaction successfully retrieved
@@ -92,13 +77,19 @@ paths:
             $ref: '#/definitions/Transactions'
         '400':
           description: Invalid Fields
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not Found
         '500':
           description: Internal Server Error
-    put:
+    patch:
+      security:
+        - Bearer: [ ]
       tags:
         - User Transactions
-      summary: Update transaction
-      description: Update transaction's details
+      summary: Partially Update transaction
+      description: Update transaction's details and category
       parameters:
         - in: header
           type: string
@@ -117,17 +108,68 @@ paths:
           required: true
         - in: body
           name: body
-          description: Update transaction attributes
+          description: Partial Update transaction attributes (description and category)
           required: true
           schema:
             $ref: '#/definitions/TransactionDetail'
+      produces:
+        - application/json
       responses:
         '200':
           description: Transaction successfully retrieved
           schema:
-            $ref: '#/definitions/Transactions'
+            $ref: '#/definitions/TransactionDetail'
         '400':
           description: Invalid Fields
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+
+    delete:
+      security:
+        - Bearer: [ ]
+      tags:
+        - User Transactions
+      summary: Delete Transaction Information's
+      description: Delete Transaction Information's
+      parameters:
+        - in: header
+          type: string
+          name: Authorization
+          description: Attached Bearer JWT token
+          required: true
+        - in: path
+          type: string
+          name: accountId
+          description: User's account Id
+          required: true
+        - in: path
+          type: string
+          name: transactionId
+          description: Transaction's Id
+          required: true
+        - in: body
+          name: body
+          description: Partial Delete transaction attribute (description)
+          required: true
+          schema:
+            $ref: '#/definitions/TransactionDetailDesc'
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Transaction successfully retrieved
+          schema:
+            $ref: '#/definitions/TransactionDetailDesc'
+        '400':
+          description: Invalid Fields
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not Found
         '500':
           description: Internal Server Error
 
@@ -157,6 +199,11 @@ definitions:
       description:
         type: string
       category:
+        type: string
+  TransactionDetailDesc:
+    type: object
+    properties:
+      description:
         type: string
 
 
